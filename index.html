@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en">
+   <head>
+      <title>INDEX.html</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="description" content=""/>
+      <meta name="author" content=""/>
+      <script type="text/javascript" src="script_src.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script type='text/javascript' src='js/script_src.js'></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="css/project.css" type="text/css" />
+      <!-- Bootstrap Core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- Custom CSS -->
+      <link href="css/business-casual.css" rel="stylesheet"/>
+      <!-- Fonts -->
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+      <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css"/>
+      <script type="text/javascript">
+      var http;
+      // All modern browsers have built in XMLHttpRequest Objects
+      var xhttp = new XMLHttpRequest(); // Create new XMLHttpRequest object
+       var ActiveXObject
+        var XMLHttpRequestObject = false;
+        if (window.XMLHttpRequest) {
+        XMLHttpRequestObject = new XMLHttpRequest(); //w3schools, youtube
+        } else if (window.ActiveXObject) { // For older versions of IE use ActiveX object
+        XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+         xhttp.onreadystatechange = function() {
+             if (xhttp.readyState == 4 && xhttp.status == 200) { //When readyState is 4 and status is 200 the responce is ready
+                 myFunction(xhttp); 
+             }
+         };
+         xhttp.open("GET", "home.xml", true); //This locates the home.xml doc
+         xhttp.send(); // These 2 lines send a request to the server
+         
+         function myFunction(xml) { //This function looks for everything init by the Tag Names
+             var xmlDoc = xml.responseXML;
+             document.getElementById("index").innerHTML = //This gets the Tagname details and stores them in an id="index"
+             xmlDoc.getElementsByTagName("intro")[0].childNodes[0].nodeValue + "<br>" + "<br>" + 
+         	 xmlDoc.getElementsByTagName("location")[0].childNodes[0].nodeValue + "<br>" + "<br>" +
+             xmlDoc.getElementsByTagName("teams")[0].childNodes[0].nodeValue + "<br>" + "<br>" +
+             xmlDoc.getElementsByTagName("winner")[0].childNodes[0].nodeValue;
+         }
+          
+      </script> 
+   </head>
+   <body>
+      <div id="container">
+      <div id="container1">
+      <div  id="content">
+      <br />
+      <h1>
+         <img src="img/euros.png" alt="logo" width="40%" height="100px"  /><img src="img/euros1.jpg" alt="euros" width="60%" align="right" height="100px" />
+      </h1>
+      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav navbar-right">
+                  <li>
+                     <a class="page-scroll" href="index.html">Home Page</a> <!-- Lins to the other pages using a bootstrap nav bar -->
+                  </li>
+                  <li>
+                     <a class="page-scroll" href="page2.html">Tables Page</a>
+                  </li>
+                  <li>
+                     <a class="page-scroll" href="page3.php">Information Page</a>
+                  </li>
+                  <li>
+                     <a class="page-scroll" href="page4.php">Register Page</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+         </div>
+         <!-- /.container-fluid -->
+      </nav>
+      <br />
+      <div id="heading">
+         <h3>UEFA Euro 2016</h3>
+         <p> France
+            10-June-2016
+            10-july-2016
+         </p>
+      </div>
+      <br />
+      <div class="row">
+         <div class="box">
+            <div class="col-lg-12">
+               <hr>
+               <p align="center"><img id="picture" src="img/ireland.jpg" alt="footy"   /></p>
+               <p align ="center"> Click On The Image Above for the craic</p>
+               <hr>
+               <p align ="center" id="index"></p>
+               <footer>
+                  <div align="right">
+                     <div>
+                        <a href=
+                           https://www.facebook.com/uefaeuro/><img src="img/facebook.jpg"
+                           alt="facebook logo" width="40" height="40" /></a>
+                        <a href="https://twitter.com/UEFAEURO?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                        <img src="img/twitter.png" alt="twitter logo" width="40"
+                           height="40" /></a>
+                     </div>
+                  </div>
+               </footer>
+               <!-- jQuery -->
+               <script src="js/jquery.js"></script>
+               <!-- Bootstrap Core JavaScript -->
+               <script src="js/bootstrap.min.js"></script>
+               <!-- Script to Activate the Carousel -->
+               <script>
+                  $('.carousel').carousel({
+                      interval: 5000 //changes the speed
+                  });
+               </script>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
