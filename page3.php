@@ -120,7 +120,7 @@
                   </p>
                   <center>
                      <p><a href=
-                        http://www.greatatlanticsports.com/article/uefa-euro-cup-2016-travel-packages /> Link for Packages</a></p>
+                        http://www.greatatlanticsports.com/article/uefa-euro-cup-2016-travel-packages target="_blank" /> Link for Packages</a></p>
                   </center>
                </div>
                <div class="clearfix"></div>
